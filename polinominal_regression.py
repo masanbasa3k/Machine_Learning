@@ -16,7 +16,7 @@ reg = lm.LinearRegression()
 polynominal_reg = PolynomialFeatures(degree=4)
 x_polynominal = polynominal_reg.fit_transform(X, y)
 
-#linear reg -> y = mx + b
+# linear reg -> y = mx + b
 # polynominal reg -> y = b0 + b1*x + b2*x^2 + b3*x^3 + ... + bn * x^n
 
 # fit
@@ -34,6 +34,6 @@ print('score : ', score)
 plt.plot(X, y_pred, color='b', label='poly')
 plt.legend()
 plt.scatter(X, y, color='r')
-plt.xlabel('Arac Fiyat')
-plt.ylabel('Arac Max Hiz')
+plt.xlabel('Car Price')
+plt.ylabel('Car Max Speed')
 plt.show()
