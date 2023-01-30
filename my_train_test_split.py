@@ -2,9 +2,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def my_train_test(X, y, test_size):# test_size should be between 1 and 100
+def my_train_test(X, y, train_size):# test_size should be between 1 and 100
     arr_rand = np.random.rand(X.shape[0])
-    split = arr_rand < np.percentile(arr_rand, test_size)
+    split = arr_rand < np.percentile(arr_rand, train_size)
     
     X_train = X[split]
     X_test = X[~split]
@@ -26,7 +26,7 @@ import sklearn.model_selection as ms
 X_train1, X_test1, y_train1, y_test1 = ms.train_test_split(experience, salary, test_size=1/3, random_state=0)
 
 # Mine
-X_train, X_test, y_train, y_test = my_train_test(experience, salary, test_size=66)
+X_train, X_test, y_train, y_test = my_train_test(experience, salary, train_size=66)
 
 print('X_train')
 print(f"Sklearn : {X_train1}, Sklearn len : {len(X_train1)}")
