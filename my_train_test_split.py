@@ -2,7 +2,14 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def my_train_test(X, y, train_size):# test_size should be between 1 and 100
+def my_train_test(*arrays, train_size):# train_size should be between 1 and 100
+    n_arrays = len(arrays)
+    if n_arrays != 2:
+        raise ValueError("Need two array required as input")
+    
+    X = arrays[0]
+    y = arrays[1]
+    
     arr_rand = np.random.rand(X.shape[0])
     split = arr_rand < np.percentile(arr_rand, train_size)
     
