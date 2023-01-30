@@ -23,3 +23,8 @@ Random Forest Regression Grahp
 Diabetes Classification finding the best k option for KNeighborsClassifier Graph
 
 ![Diabetes_classification](https://user-images.githubusercontent.com/66223190/215354129-5b327041-f867-4ab1-84cc-2e53c373f96e.png)
+
+
+My train test split and Sklearn Train test split X_train graph
+
+![My_train_test_split](https://user-images.githubusercontent.com/66223190/215593000-01940faa-66b5-481a-b728-e1aa05c0891c.png)
