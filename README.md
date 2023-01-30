@@ -19,3 +19,7 @@ Polinominal Regression Grahp
 Random Forest Regression Grahp
 
 ![random_forest_regression](https://user-images.githubusercontent.com/66223190/215323543-a2776806-839b-419b-8de0-f679a98d6ebf.png)
+
+Diabetes Classification finding the best k option for KNeighborsClassifier Graph
+
+![Diabetes_classification](https://user-images.githubusercontent.com/66223190/215354129-5b327041-f867-4ab1-84cc-2e53c373f96e.png)
