@@ -2,6 +2,10 @@
  Machine learning projects graph photos
  Mostly datasets are taken from kaggle you can search and find it
  
+ Credit Score Classification RandomForestClassifier, GaussianNB, KNeighborsClassifier comparison
+ 
+ ![credit_score_classification(knn,gnb,rfc)](https://user-images.githubusercontent.com/66223190/216725523-386c329e-1767-42f7-b837-5f535a966f83.png)
+ 
  
 Job Placement Knn selection and ML (83,33%)
 
