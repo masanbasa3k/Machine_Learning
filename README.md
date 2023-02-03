@@ -1,5 +1,6 @@
 # Machine_Learning
  Machine learning projects graph photos
+ Mostly datasets are taken from kaggle you can search and find it
  
  
 Job Placement Knn selection and ML (83,33%)
