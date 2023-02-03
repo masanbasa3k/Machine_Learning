@@ -22,31 +22,15 @@ sns.heatmap(correlation, annot = True, cmap = 'YlOrBr')
 plt.show()'''
 
 # Chacing values 
-df['status'] = df['status'].replace(['Placed'], 1)
-df['status'] = df['status'].replace(['Not Placed'], 0)
+df["status"] = df["status"].map({"Placed": 1, "Not Placed": 0})
+df["ssc_board"] = df["ssc_board"].map({"Central": 1, "Others": 0})
+df["hsc_board"] = df["hsc_board"].map({"Central": 1, "Others": 0})
+df["undergrad_degree"] = df["undergrad_degree"].map({"Sci&Tech": 1, "Comm&Mgmt": 0, "Others": 2})
+df["hsc_subject"] = df["hsc_subject"].map({"Commerce": 1, "Science": 0, "Arts": 2})
+df["work_experience"] = df["work_experience"].map({"Yes": 1, "No": 0})
+df["specialisation"] = df["specialisation"].map({"Mkt&HR": 1, "Mkt&Fin": 0})
 
-df['gender'] = df['gender'].replace(['M'], 1)
-df['gender'] = df['gender'].replace(['F'], 0)
-
-df['ssc_board'] = df['ssc_board'].replace(['Central'], 1)
-df['ssc_board'] = df['ssc_board'].replace(['Others'], 0)
-
-df['hsc_board'] = df['hsc_board'].replace(['Central'], 1)
-df['hsc_board'] = df['hsc_board'].replace(['Others'], 0)
-
-df['undergrad_degree'] = df['undergrad_degree'].replace(['Sci&Tech'], 1)
-df['undergrad_degree'] = df['undergrad_degree'].replace(['Comm&Mgmt'], 0)
-df['undergrad_degree'] = df['undergrad_degree'].replace(['Others'], 2)
-
-df['hsc_subject'] = df['hsc_subject'].replace(['Commerce'], 1)
-df['hsc_subject'] = df['hsc_subject'].replace(['Science'], 0)
-df['hsc_subject'] = df['hsc_subject'].replace(['Arts'], 2)
-
-df['work_experience'] = df['work_experience'].replace(['Yes'], 1)
-df['work_experience'] = df['work_experience'].replace(['No'], 0)
-
-df['specialisation'] = df['specialisation'].replace(['Mkt&HR'], 1)
-df['specialisation'] = df['specialisation'].replace(['Mkt&Fin'], 0)
+df = df.drop(["gender"], axis=1)
 
 X = df.drop(["status"], axis=1)
 y = df.status.values
@@ -108,9 +92,9 @@ cr = classification_report(y_test, y_pred)
 print(f"classification report : {cr}")
 
 
-features1 = np.array([[1, 67.00,	1, 91.00, 1, 1,	58.00, 1, 1, 55.0, 1, 58.80]])# exepting 1
-features2 = np.array([[0, 21.00,	0, 43.00, 0, 0,	12.00, 0, 0, 23.0, 0, 34.80]])# exepting 0
-features3 = np.array([[1, 50.00,	0, 35.00, 1, 0,	95.00, 0, 0, 30.0, 1, 45.80]])# who knows
+features1 = np.array([[67.00,	1, 91.00, 1, 1,	58.00, 1, 1, 55.0, 1, 58.80]])# exepting 1
+features2 = np.array([[21.00,	0, 43.00, 0, 0,	12.00, 0, 0, 23.0, 0, 34.80]])# exepting 0
+features3 = np.array([[50.00,	0, 35.00, 1, 0,	95.00, 0, 0, 30.0, 1, 45.80]])# who knows
 prediction1 = knn.predict(features1)
 prediction2 = knn.predict(features2)
 prediction3 = knn.predict(features3)
