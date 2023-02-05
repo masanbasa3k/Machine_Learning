@@ -2,7 +2,12 @@
  Machine learning projects graph photos
  Mostly datasets are taken from kaggle you can search and find it
  
- Credit Score Classification RandomForestClassifier, GaussianNB, KNeighborsClassifier comparison
+ Fetal Healt Classification Compareing : SVM, NB, CART, KNN, LDA, RFC, LR
+ 
+ ![fetal_healt_classification_compare](https://user-images.githubusercontent.com/66223190/216824651-c248196b-69dc-45a8-95b2-10098ff338c5.png)
+ 
+ 
+ Credit Score Classification Comparing :  RandomForestClassifier, GaussianNB, KNeighborsClassifier comparison
  
  ![credit_score_classification(knn,gnb,rfc)](https://user-images.githubusercontent.com/66223190/216725523-386c329e-1767-42f7-b837-5f535a966f83.png)
  
@@ -10,6 +15,8 @@
 Job Placement Knn selection and ML (83,33%)
 
 <img width="626" alt="Screenshot 2023-02-02 at 00 40 07" src="https://user-images.githubusercontent.com/66223190/216170564-a86952a0-0913-4e5d-8231-fbb5def23a6c.png">
+
+Find the best k for knn
 
 ![job_placement_graph](https://user-images.githubusercontent.com/66223190/216170644-9289d03e-c581-471a-9698-83253ff1dbe6.png)
 
